@@ -1,0 +1,16 @@
+.main{margin:auto; display: flex; width:860px}
+
+    .main >textarea{width:400px; height:400px ; margin:auto;background-color: aqua;}
+    .main >div{width:400px; height:400px ; margin:auto; border:1px solid black;background-color: aqua;}
+
+    #btn_div{text-align: center; margin: 10px;}
+
+    
+
+    .cen{text-align: center; margin: auto; margin: 10px;}
+
+    .cen >div{display:flex}
+    .cen> div > div{margin-left: 340px;}
+
+    .input_area{background-color: aqua;}
+    button{background-color:rgb(116, 151, 151)}

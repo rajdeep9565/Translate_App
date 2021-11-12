@@ -5,33 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRANSLATE</title>
-
-<style>
-
-   
-
-    .main{margin:auto; display: flex; width:860px}
-
-    .main >textarea{width:400px; height:400px ; margin:auto;background-color: aqua;}
-    .main >div{width:400px; height:400px ; margin:auto; border:1px solid black;background-color: aqua;}
-
-    #btn_div{text-align: center; margin: 10px;}
-
-    
-
-    .cen{text-align: center; margin: auto; margin: 10px;}
-
-    .cen >div{display:flex}
-    .cen> div > div{margin-left: 340px;}
-
-    .input_area{background-color: aqua;}
-    button{background-color:rgb(116, 151, 151)}
-
-</style>    
-
-
-
 </head>
+<link rel="stylesheet" href="translate.css">
 <body>
 
 <div class='cen'>
@@ -125,54 +100,4 @@
 
 </html>
 
-<script>
-
-
-   async function trans(){
-    
-    src_lang=document.getElementById('src_lang').value
-    tar_lang=document.getElementById('tar_lang').value
-    input_text=document.getElementById('input_text').value
-    result_text=document.getElementById('result_text')
-    
-    
-    console.log(src_lang)
-    
-    console.log(input_text)
-
-   try{
-    const res = await fetch("https://libretranslate.de/translate", {
-	method: "POST",
-	body: JSON.stringify({
-		q: `${input_text}`,
-		source: `${src_lang}`,
-		target: `${tar_lang}`
-	}),
-	headers: { "Content-Type": "application/json" }
-   });
-
-
-
-   var result=await res.json();
-
-   result_text.innerHTML=result.translatedText
-   console.log(result.translatedText)
-
-}
-
-catch(e){console.log(e)}
-
-
-
-
-
-
-
-    
-    }
-    
-    
-    
-    
-    
-    </script>
+<script src="translate.js"></script>
